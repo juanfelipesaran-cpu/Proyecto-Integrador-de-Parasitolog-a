@@ -1014,10 +1014,10 @@
             document.getElementById('parasite-tag').innerText = p.tag;
             document.getElementById('parasite-disease').innerText = p.disease;
             document.getElementById('parasite-organ').innerText = p.organ;
-           if (p.icon) {
+          if (p.icon) {
             document.getElementById('parasite-icon').innerHTML = `<i class="fa-solid ${p.icon}"></i>`;
         }
-            const parasiteImg = document.getElementById('parasite-img');
+        const parasiteImg = document.getElementById('parasite-img');
         if (parasiteImg) {
             parasiteImg.src = parasiteKey === 'fasciola' ? 'fasciola.jpeg' : 'paragonimus.jpeg';
             parasiteImg.alt = parasiteKey === 'fasciola' ? 'Fasciola hepatica' : 'Paragonimus westermani';
@@ -1025,11 +1025,10 @@
         const parasiteIcon = document.getElementById('parasite-icon');
         if (parasiteIcon) {
             parasiteIcon.innerHTML = parasiteKey === 'fasciola'
-                ? p.iconSvg
-                : '<i class="fa-solid fa-lungs"></i>';
+                ? '<svg class="w-8 h-8 text-[#0d9488] fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5c-4.4 0-8.2 2.9-9.3 6.9-.4 1.6.3 3.4 1.7 4.2 1.5.9 3.5.7 4.9-.3 1.2-.9 2.7-.9 3.9 0 2 1.4 4.8 1.2 6.5-.5 1.3-1.3 1.7-3.3 1-5-1.2-3-4.7-5.3-8.7-5.3z"/></svg>'
+                : '<i class="fa-solid fa-lungs text-2xl text-[#0d9488]"></i>';
         }
-        }
-            const cycleImg = document.getElementById('cycle-parasite-img');
+        const cycleImg = document.getElementById('cycle-parasite-img');
         if (cycleImg) {
             cycleImg.src = parasiteKey === 'fasciola' ? 'ciclo-fasciola.jpeg' : 'ciclo-paragonimus.jpeg';
             cycleImg.alt = parasiteKey === 'fasciola'
@@ -1037,36 +1036,35 @@
                 : 'Ciclo biológico de Paragonimus westermani';
         }
 
-            // Update Taxonomy
-            document.getElementById('tax-order').innerText = p.taxonomy.order;
-            document.getElementById('tax-family').innerText = p.taxonomy.family;
-            document.getElementById('tax-species').innerHTML = `<i>${p.taxonomy.species}</i>`;
+        // Update Taxonomy
+        document.getElementById('tax-order').innerText = p.taxonomy.order;
+        document.getElementById('tax-family').innerText = p.taxonomy.family;
+        document.getElementById('tax-species').innerHTML = `<i>${p.taxonomy.species}</i>`;
 
-            // Update Morphology
-            document.getElementById('morph-adult-shape').innerText = p.morphology.adultShape;
-            document.getElementById('morph-adult-size').innerText = p.morphology.adultSize;
-            document.getElementById('morph-adult-title').innerText = p.morphology.adultTitle;
-            document.getElementById('morph-adult-desc').innerText = p.morphology.adultDesc;
-            document.getElementById('morph-adult-note').innerText = p.morphology.adultNote;
+        // Update Morphology
+        document.getElementById('morph-adult-shape').innerText = p.morphology.adultShape;
+        document.getElementById('morph-adult-size').innerText = p.morphology.adultSize;
+        document.getElementById('morph-adult-title').innerText = p.morphology.adultTitle;
+        document.getElementById('morph-adult-desc').innerText = p.morphology.adultDesc;
+        document.getElementById('morph-adult-note').innerText = p.morphology.adultNote;
 
-            document.getElementById('morph-egg-type').innerText = p.morphology.eggType;
-            document.getElementById('morph-egg-size').innerText = p.morphology.eggSize;
-            document.getElementById('morph-egg-title').innerText = p.morphology.eggTitle;
-            document.getElementById('morph-egg-desc').innerText = p.morphology.eggDesc;
-            document.getElementById('morph-egg-note').innerText = p.morphology.eggNote;
+        document.getElementById('morph-egg-type').innerText = p.morphology.eggType;
+        document.getElementById('morph-egg-size').innerText = p.morphology.eggSize;
+        document.getElementById('morph-egg-title').innerText = p.morphology.eggTitle;
+        document.getElementById('morph-egg-desc').innerText = p.morphology.eggDesc;
+        document.getElementById('morph-egg-note').innerText = p.morphology.eggNote;
 
-            // Render SVG Diagram for Tab 2
-            renderSVGDiagram();
+        // Render SVG Diagram for Tab 2
+        renderSVGDiagram();
 
-            // Render Cycle for Tab 3
-            currentCycleStep = 0;
-            renderCycleStepper();
-            renderCycleStepContent();
+        // Render Cycle for Tab 3
+        currentCycleStep = 0;
+        renderCycleStepper();
+        renderCycleStepContent();
 
-            // Render Diagnostics for Tab 4
-            renderDiagnostics();
-        }
-
+        // Render Diagnostics for Tab 4
+        renderDiagnostics();
+    }
         // TAB SWITCHING FUNCTION
         function switchTab(tabId) {
             currentTab = tabId;
