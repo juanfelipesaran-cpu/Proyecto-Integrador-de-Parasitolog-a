@@ -421,6 +421,14 @@
 
         <!-- SECCIÓN 3: CICLO BIOLÓGICO Y TRANSMISIÓN -->
         <section id="tab-3" class="tab-content hidden space-y-6">
+            <div class="bg-brand-surface border border-brand-border rounded-2xl p-4 flex justify-center">
+                <img
+                    id="cycle-parasite-img"
+                    src="ciclo-fasciola.jpeg"
+                    alt="Ciclo biológico de Fasciola hepatica"
+                    class="w-full max-w-4xl max-h-72 object-contain rounded-xl"
+                />
+            </div>
             <div class="bg-brand-surface border border-brand-border rounded-2xl p-6">
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                     <div>
@@ -1017,6 +1025,13 @@
             parasiteIcon.innerHTML = parasiteKey === 'fasciola'
                 ? '<i class="fa-solid fa-leaf"></i>'
                 : '<i class="fa-solid fa-lungs"></i>';
+        }
+            const cycleImg = document.getElementById('cycle-parasite-img');
+        if (cycleImg) {
+            cycleImg.src = parasiteKey === 'fasciola' ? 'ciclo-fasciola.jpeg' : 'ciclo-paragonimus.jpeg';
+            cycleImg.alt = parasiteKey === 'fasciola'
+                ? 'Ciclo biológico de Fasciola hepatica'
+                : 'Ciclo biológico de Paragonimus westermani';
         }
 
             // Update Taxonomy
