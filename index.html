@@ -1093,29 +1093,29 @@
             const p = parasiteData[currentParasite];
             document.getElementById('vis-title').innerHTML = `Anatomía Interactiva: <i>${p.title}</i>`;
 
-            if (currentParasite === 'fasciola') {
-                container.innerHTML = `
-                    <svg viewBox="0 0 600 380" class="w-full h-auto max-w-md drop-shadow-2xl">
-                        <!-- Leaf body outline -->
-                        <path d="M 300,30 C 330,30 350,60 380,100 C 420,160 410,280 300,360 C 190,280 180,160 220,100 C 250,60 270,30 300,30 Z" fill="#1e293b" stroke="#14b8a6" stroke-width="4" />
-                        <!-- Cephalic Cone -->
-                        <path d="M 280,35 C 300,10 300,10 320,35 Z" fill="#14b8a6" opacity="0.3" />
-                        <!-- Branched intestinal caeca -->
-                        <path d="M 295,70 Q 230,120 220,280 M 305,70 Q 370,120 380,280" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="3 2" />
-                        <!-- Oral Sucker -->
-                        <circle cx="300" cy="45" r="14" fill="#0d9488" stroke="#fff" stroke-width="2" />
-                        <!-- Ventral Sucker -->
-                        <circle cx="300" cy="110" r="16" fill="#f59e0b" stroke="#fff" stroke-width="2" />
-                        <!-- Branched Testes -->
-                        <path d="M 270,240 C 240,250 260,280 280,290 M 330,240 C 360,250 340,280 320,290" fill="none" stroke="#6366f1" stroke-width="3" />
-                        
-                        <!-- Interactive Hotspots -->
-                        ${p.hotspots.map((h, i) => `
-                            <g class="cursor-pointer group" onclick="selectHotspot(${i})">
-                                <circle cx="${h.x}" cy="${h.y}" r="18" class="fill-brand-teal/30 animate-ping" />
-                                <circle cx="${h.x}" cy="${h.y}" r="12" fill="#14b8a6" class="group-hover:scale-125 transition-transform" />
-                                <text x="${h.x}" y="${h.y + 4}" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">${h.num}</text>
-                            </g>
+           if (currentParasite === 'fasciola') {
+            container.innerHTML = `
+                <svg viewBox="0 0 600 380" class="w-full h-auto max-w-md mx-auto rounded-xl drop-shadow-2xl">
+                    <!-- Imagen real de Fasciola hepatica -->
+                    <image
+                        href="fasciola-anatomia.jpeg"
+                        x="140"
+                        y="10"
+                        width="320"
+                        height="360"
+                        preserveAspectRatio="xMidYMid meet"
+                    />
+
+                    <!-- Interactive Hotspots -->
+                    ${p.hotspots.map((h, i) => `
+                        <g class="cursor-pointer group" onclick="selectHotspot(${i})">
+                            <circle cx="${h.x}" cy="${h.y}" r="18" class="fill-brand-teal/30 animate-ping" />
+                            <circle cx="${h.x}" cy="${h.y}" r="12" fill="#0d9488" stroke="#fff" stroke-width="2" class="group-hover:scale-125 transition-transform" />
+                            <text x="${h.x}" y="${h.y + 4}" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">${h.num}</text>
+                        </g>
+                    `).join('')}
+                </svg>
+            `;
                         `).join('')}
                     </svg>
                 `;
