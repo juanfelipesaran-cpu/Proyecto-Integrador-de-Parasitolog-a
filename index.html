@@ -204,10 +204,11 @@
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
                         <img
-                            src="fasciola.jpeg"
-                            alt="Fasciola hepatica"
-                            class="w-44 h-28 object-cover rounded-xl border border-brand-border shadow-sm shrink-0"
-                        />
+                          id="parasite-img"
+            src="fasciola.jpeg"
+            alt="Fasciola hepatica"
+            class="w-44 h-28 object-cover rounded-xl border border-brand-border shadow-sm shrink-0"
+        />
 
                         <div class="flex items-center space-x-4 bg-brand-dark/80 p-4 rounded-xl border border-brand-border/80 min-w-[240px]">
                             <div class="w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-tealLight flex items-center justify-center font-bold text-2xl" id="parasite-icon">
@@ -1006,6 +1007,17 @@
             document.getElementById('parasite-disease').innerText = p.disease;
             document.getElementById('parasite-organ').innerText = p.organ;
             document.getElementById('parasite-icon').innerHTML = `<i class="fa-solid ${p.icon}"></i>`;
+            const parasiteImg = document.getElementById('parasite-img');
+        if (parasiteImg) {
+            parasiteImg.src = parasiteKey === 'fasciola' ? 'fasciola.jpeg' : 'paragonimus.jpeg';
+            parasiteImg.alt = parasiteKey === 'fasciola' ? 'Fasciola hepatica' : 'Paragonimus westermani';
+        }
+        const parasiteIcon = document.getElementById('parasite-icon');
+        if (parasiteIcon) {
+            parasiteIcon.innerHTML = parasiteKey === 'fasciola'
+                ? '<i class="fa-solid fa-leaf"></i>'
+                : '<i class="fa-solid fa-lungs"></i>';
+        }
 
             // Update Taxonomy
             document.getElementById('tax-order').innerText = p.taxonomy.order;
