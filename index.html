@@ -1116,34 +1116,30 @@
                     `).join('')}
                 </svg>
             `;
-            } else {
-                container.innerHTML = `
-                    <svg viewBox="0 0 600 380" class="w-full h-auto max-w-md drop-shadow-2xl">
-                        <!-- Coffee bean thick oval body -->
-                        <ellipse cx="300" cy="200" rx="160" ry="130" fill="#1e293b" stroke="#f59e0b" stroke-width="4" />
-                        <!-- Center indentation -->
-                        <path d="M 300,70 L 300,330" stroke="#334155" stroke-width="3" stroke-dasharray="4 4" />
-                        <!-- Oral Sucker -->
-                        <circle cx="300" cy="90" r="15" fill="#14b8a6" stroke="#fff" stroke-width="2" />
-                        <!-- Ventral Sucker -->
-                        <circle cx="300" cy="170" r="16" fill="#f59e0b" stroke="#fff" stroke-width="2" />
-                        <!-- Lobed Uterus -->
-                        <circle cx="300" cy="230" r="22" fill="#6366f1" opacity="0.6" stroke="#14b8a6" stroke-width="2" />
-                        <!-- Lobed Testes -->
-                        <circle cx="230" cy="290" r="18" fill="#ef4444" opacity="0.6" />
-                        <circle cx="370" cy="290" r="18" fill="#ef4444" opacity="0.6" />
+           } else {
+            container.innerHTML = `
+                <svg viewBox="0 0 600 380" class="w-full h-auto max-w-md mx-auto rounded-xl drop-shadow-2xl">
+                    <!-- Imagen real de Paragonimus westermani -->
+                    <image
+                        href="paragonimus-anatomia.jpeg"
+                        x="140"
+                        y="10"
+                        width="320"
+                        height="360"
+                        preserveAspectRatio="xMidYMid meet"
+                    />
 
-                        <!-- Hotspots -->
-                        ${p.hotspots.map((h, i) => `
-                            <g class="cursor-pointer group" onclick="selectHotspot(${i})">
-                                <circle cx="${h.x}" cy="${h.y}" r="18" class="fill-brand-gold/30 animate-ping" />
-                                <circle cx="${h.x}" cy="${h.y}" r="12" fill="#f59e0b" class="group-hover:scale-125 transition-transform" />
-                                <text x="${h.x}" y="${h.y + 4}" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">${h.num}</text>
-                            </g>
-                        `).join('')}
-                    </svg>
-                `;
-            }
+                    <!-- Hotspots -->
+                    ${p.hotspots.map((h, i) => `
+                        <g class="cursor-pointer group" onclick="selectHotspot(${i})">
+                            <circle cx="${h.x}" cy="${h.y}" r="18" class="fill-brand-gold/30 animate-ping" />
+                            <circle cx="${h.x}" cy="${h.y}" r="12" fill="#f59e0b" stroke="#fff" stroke-width="2" class="group-hover:scale-125 transition-transform" />
+                            <text x="${h.x}" y="${h.y + 4}" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">${h.num}</text>
+                        </g>
+                    `).join('')}
+                </svg>
+            `;
+        }
             selectHotspot(0);
         }
 
