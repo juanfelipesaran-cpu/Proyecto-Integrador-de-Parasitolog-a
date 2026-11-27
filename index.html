@@ -455,7 +455,7 @@
                         <i class="fa-solid fa-notes-medical text-brand-tealLight"></i>
                         <span>Consideración diagnóstica especial: presencia de huevos en heces</span>
                     </h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">
+                    <p class="text-xs text-slate-300 leading-relaxed"id="diag-special-note">
                         Aunque Paragonimus se localiza principalmente en los pulmones, sus huevos pueden ser expulsados con el esputo y luego tragados, apareciendo en las heces. Por eso, encontrarlos en materia fecal no significa necesariamente que exista una infección intestinal. Se recomienda confirmar el diagnóstico mediante el examen del esputo y la identificación microscópica de los huevos.
                     </p>
                 </div>
@@ -850,6 +850,7 @@
                     { phase: "acute", type: "Imagenología", title: "Ecografía / TC Hepática", desc: "Muestra trayectos hipodensos migratorios en parénquima hepático y hepatomegalia.", sample: "Exploración Física / Imagen" },
                     { phase: "chronic", type: "Coproparasitoscópico", title: "Sedimentación en Copa / Kato-Katz", desc: "Hallazgo de huevos operculados pardo-amarillentos característicos en materia fecal.", sample: "Muestra de heces fresca" }
                 ]
+        diagSpecialNote: "En Fasciola hepatica, la eliminación de huevos por bilis y heces no ocurre en la fase aguda migratoria inicial y puede ser intermitente o baja en infecciones leves o crónicas. Por ello, un coproparasitoscópico negativo no descarta la infección y conviene combinarlo con serología, imagenología o repetir muestras seriadas.",
             },
             paragonimus: {
                 title: "Paragonimus westermani",
@@ -899,6 +900,7 @@
           distributionDesc: "Presente en regiones tropicales y subtropicales de Colombia y Latinoamérica donde coinciden cuerpos de agua dulce, caracoles, crustáceos y reservorios animales, con registros en Colombia en zonas de Antioquia, Valle del Cauca, Amazonas y el Pacífico, y en Latinoamérica en países como Ecuador, Perú, México y Costa Rica. Constituye una zoonosis de interés sanitario, ya que circula entre fauna silvestre o doméstica y humanos, asociada a hábitos alimentarios locales y condiciones de saneamiento.",
           transmissionTitle: "Mecanismo de Transmisión",
           transmissionDesc: "Ingestión de cangrejos o camarones de agua dulce crudos o poco cocidos que contienen metacercarias enquistadas (principal vía de infección humana en Latinoamérica)."
+    diagSpecialNote: "Aunque Paragonimus se localiza principalmente en los pulmones, sus huevos pueden ser expulsados con el esputo y luego tragados, apareciendo en las heces. Por eso, encontrarlos en materia fecal no significa necesariamente que exista una infección intestinal. Se recomienda confirmar el diagnóstico mediante el examen del esputo y la identificación microscópica de los huevos.",
       },
                 diagnostics: [
                     { phase: "pulmonary", type: "Microscopía Esputo", title: "Examen de Esputo Directo / Concentrado", desc: "Búsqueda de huevos operculados en esputo herrumbroso o achocolatado característico.", sample: "Esputo (Expectoración)" },
@@ -1055,6 +1057,10 @@
     if (transTitle && p.epidemiology.transmissionTitle) transTitle.innerText = p.epidemiology.transmissionTitle;
     if (transDesc && p.epidemiology.transmissionDesc) transDesc.innerText = p.epidemiology.transmissionDesc;
 }
+          const diagNote = document.getElementById('diag-special-note');
+        if (diagNote && p.diagSpecialNote) {
+            diagNote.innerText = p.diagSpecialNote;
+        }  
         const cycleImg = document.getElementById('cycle-parasite-img');
         if (cycleImg) {
             cycleImg.src = parasiteKey === 'fasciola' ? 'ciclo-fasciola.jpeg' : 'ciclo-paragonimus.jpeg';
