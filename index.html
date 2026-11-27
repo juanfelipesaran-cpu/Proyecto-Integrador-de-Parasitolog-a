@@ -363,42 +363,7 @@
             </div>
 
             <!-- Scientific Image Citation Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-teal/40 transition flex flex-col">
-                    <div class="h-44 bg-brand-dark flex items-center justify-center p-4 relative border-b border-brand-border">
-                        <i class="fa-solid fa-eye text-5xl text-brand-teal/30"></i>
-                        <span class="absolute bottom-2 left-2 bg-brand-surface/90 text-[10px] font-mono px-2 py-0.5 rounded text-slate-300 border border-brand-border">Microscopía Óptica</span>
-                    </div>
-                    <div class="p-4 flex-grow flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-white text-sm" id="cit-card-1-title">Huevo Operculado</h4>
-                            <p class="text-xs text-slate-400 mt-1" id="cit-card-1-desc">Demostración del opérculo superior mediante técnica de sedimentación en copa.</p>
-                        </div>
-                        <div class="mt-3 text-[11px] text-brand-gold italic">
-                            Fuente: CDC DPDx - Laboratory Identification of Parasitic Diseases
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-teal/40 transition flex flex-col">
-                    <div class="h-44 bg-brand-dark flex items-center justify-center p-4 relative border-b border-brand-border">
-                        <i class="fa-solid fa-water text-5xl text-brand-gold/30"></i>
-                        <span class="absolute bottom-2 left-2 bg-brand-surface/90 text-[10px] font-mono px-2 py-0.5 rounded text-slate-300 border border-brand-border">Hospedador Intermediario</span>
-                    </div>
-                    <div class="p-4 flex-grow flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-white text-sm" id="cit-card-2-title">Caracol y crustáceo de agua dulce </h4>
-                            <p class="text-xs text-slate-400 mt-1" id="cit-card-2-desc">El primer hospedador es el caracol de agua dulce del género Aroapyrgus, el segundo hospedador es el cangrejo de agua dulce, del género Hypolobocera , donde se desarrollan las metacercarias infectantes.</p>
-                        </div>
-                        <div class="mt-3 text-[11px] text-brand-gold italic">
-                            Fuente: Organización Mundial de la Salud (OMS / WHO)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-brand-surface border border-brand-border rounded-2xl overflow-hidden hover:border-brand-teal/40 transition flex flex-col">
-                    <div class="h-44 bg-brand-dark flex items-center justify-center p-4 relative border-b border-brand-border">
-                        <i class="fa-solid fa-seedling text-5xl text-brand-accent/30"></i>
+           
                         <span class="absolute bottom-2 left-2 bg-brand-surface/90 text-[10px] font-mono px-2 py-0.5 rounded text-slate-300 border border-brand-border">Vehículo de Infección</span>
                     </div>
                     <div class="p-4 flex-grow flex flex-col justify-between">
@@ -928,10 +893,10 @@
                     eggNote: "Abundantes en esputo herrumbroso y en heces deglutidas"
                 },
                 hotspots: [
-                    { id: "h1", x: 300, y: 70, num: "1", title: "Ventosa Oral Subterminal", desc: "Ubicada en el extremo anterior. Tamaño semejante a la ventosa ventral.", function: "Anclaje en cavidades o quistes pulmonares." },
-                    { id: "h2", x: 300, y: 150, num: "2", title: "Ventosa Ventral (Acetábulo Central)", desc: "Ubicada en el tercio medio ventral del cuerpo abombado.", function: "Permite la fijación firme en la cápsula fibrosa." },
-                    { id: "h3", x: 300, y: 220, num: "3", title: "Útero Lobulado en Ovillo", desc: "Masa uterina compacta lobulada situada por delante de los testículos.", function: "Almacenamiento y liberación de miles de huevos en el quiste." },
-                    { id: "h4", x: 230, y: 310, num: "4", title: "Testículos Lobulados Posteriores", desc: "Dos testículos profundamente lobulados localizados uno al lado del otro en la región posterior.", function: "Producción de gametos masculinos." }
+                    { id: "h1", x: 300, y: 70, num: "1", title: "1.Ventosa Oral Subterminal", desc: "Ventosa anterior de tamaño similar a la ventral, conectada al tubo digestivo. Ayuda al anclaje inicial y al paso de fluidos o secreciones hacia el sistema digestivo en el quiste pulmonar." },
+                    { id: "h2", x: 300, y: 150, num: "2", title: "2.Ventosa Ventral (Acetábulo Central)", desc: "Ventosa redondeada ubicada en el tercio medio ventral del cuerpo. Permite una fijación firme a la cápsula fibrosa o tejido pulmonar frente al movimiento y exudados." },
+                    { id: "h3", x: 300, y: 220, num: "3", title: "3.Útero Lobulado en Ovillo", desc: "Conducto reproductor enrollado en forma de ovillo compactado. Almacena y madura los huevos fertilizados para su liberación hacia el exterior." },
+                    { id: "h4", x: 230, y: 310, num: "4", title: "4.Dos testículos marcadamente lobulados situados en la región posterior. Producen los gametos masculinos (espermatozoides) para la reproducción del parásito." }
                 ],
                 cycleSteps: [
                     { num: "Paso 1 de 7", title: "Eliminación de Huevos", desc: "Los adultos encapsulados en paredes del pulmón liberan huevos que salen por el esputo o son deglutidos y eliminados en heces.", host: "Esputo / Heces Humana", stage: "Huevo no embrionado", icon: "fa-head-side-cough" },
