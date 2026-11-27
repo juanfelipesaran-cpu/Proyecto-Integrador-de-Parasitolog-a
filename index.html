@@ -308,16 +308,10 @@
                     <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
                         <div class="font-bold text-brand-tealLight text-sm mb-1">Distribución Zoonótica</div>
                         <p class="text-slate-300 leading-relaxed">
-                            En Colombia se han identificado focos en Antioquia (Urrao y Medellín), Valle del Cauca, Amazonas y comunidades del Pacífico. En Latinoamérica también se registra en Ecuador, Perú, México y Costa Rica.
+                            Presente en regiones tropicales y subtropicales de Colombia y Latinoamérica donde coinciden cuerpos de agua dulce, caracoles, crustáceos y reservorios animales, con registros en Colombia en zonas de Antioquia, Valle del Cauca, Amazonas y el Pacífico, y en Latinoamérica en países como Ecuador, Perú, México y Costa Rica. Constituye una zoonosis de interés sanitario, ya que circula entre fauna silvestre o doméstica y humanos, asociada a hábitos alimentarios locales y condiciones de saneamiento.
                         </p>
                     </div>
                    
-                    <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
-                        <div class="font-bold text-brand-accent text-sm mb-1">Mecanismo de Transmisión</div>
-                        <p class="text-slate-300 leading-relaxed">
-                            Ingestión de cangrejos de agua dulce crudos o poco cocidos que contienen metacercarias enquistadas. Esta es la principal vía de infección humana en Latinoamérica.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -845,6 +839,12 @@
                 defHosts: "Ganado vacuno, ovino, caprino y humanos (zoonosis).",
                 intHosts: "Caracoles Lymnaeidae (ej. Galba truncatula, Lymnaea bogotensis).",
                 infRoute: "Ingesta de metacercarias en berros acuáticos o agua no tratada.",
+                epidemiology: {
+  distributionTitle: "Distribución Zoonótica",
+  distributionDesc: "Presente en áreas ganaderas de clima frío y templado de Colombia y Latinoamérica, particularmente en zonas andinas y de altiplano, con registros en regiones como el Altiplano Cundiboyacense, Nariño y Antioquia, y en países andinos y de la región como Perú, Bolivia y Ecuador. Su circulación depende de la humedad y del caracol hospedador, afectando tanto la salud animal y humana como la economía pecuaria por decomiso de hígados.",
+  transmissionTitle: "Mecanismo de Transmisión",
+  transmissionDesc: "Ingestión de plantas acuáticas crudas o mal lavadas (como berros) o agua contaminada con metacercarias enquistadas."
+},
                 diagnostics: [
                     { phase: "acute", type: "Serología / ELISA", title: "ELISA / Immunoblot", desc: "Detección de anticuerpos IgG específicos anti-Fasciola. Clave en fase aguda migratoria antes de que haya huevos en heces.", sample: "Suero sanguíneo" },
                     { phase: "acute", type: "Imagenología", title: "Ecografía / TC Hepática", desc: "Muestra trayectos hipodensos migratorios en parénquima hepático y hepatomegalia.", sample: "Exploración Física / Imagen" },
@@ -893,6 +893,13 @@
                 defHosts: "Humanos, felinos, cánidos y cerdos.",
                 intHosts: "1er: Caracoles (Thiaridae) / 2do: Cangrejos y camarones de agua dulce.",
                 infRoute: "Ingesta de carne cruda o poco cocida de crustáceos de agua dulce.",
+                infRoute: "Ingesta de carne cruda o poco cocida de crustáceos de agua dulce.",
+      epidemiology: {
+          distributionTitle: "Distribución Zoonótica",
+          distributionDesc: "Presente en regiones tropicales y subtropicales de Colombia y Latinoamérica donde coinciden cuerpos de agua dulce, caracoles, crustáceos y reservorios animales, con registros en Colombia en zonas de Antioquia, Valle del Cauca, Amazonas y el Pacífico, y en Latinoamérica en países como Ecuador, Perú, México y Costa Rica. Constituye una zoonosis de interés sanitario, ya que circula entre fauna silvestre o doméstica y humanos, asociada a hábitos alimentarios locales y condiciones de saneamiento.",
+          transmissionTitle: "Mecanismo de Transmisión",
+          transmissionDesc: "Ingestión de cangrejos o camarones de agua dulce crudos o poco cocidos que contienen metacercarias enquistadas (principal vía de infección humana en Latinoamérica)."
+      },
                 diagnostics: [
                     { phase: "pulmonary", type: "Microscopía Esputo", title: "Examen de Esputo Directo / Concentrado", desc: "Búsqueda de huevos operculados en esputo herrumbroso o achocolatado característico.", sample: "Esputo (Expectoración)" },
                     { phase: "pulmonary", type: "Imagenología", title: "Radiografía / TC de Tórax", desc: "Infiltrados nodulares, cavidades en 'anillo de sello' y derrames pleurales.", sample: "Imágenes de Tórax" },
