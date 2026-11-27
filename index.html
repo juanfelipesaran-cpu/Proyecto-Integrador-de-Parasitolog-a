@@ -455,9 +455,7 @@
                         <i class="fa-solid fa-notes-medical text-brand-tealLight"></i>
                         <span>Consideración diagnóstica especial: presencia de huevos en heces</span>
                     </h4>
-                    <p class="text-xs text-slate-300 leading-relaxed"id="diag-special-note">
-                       Aunque Fasciola hepatica se localiza en los conductos biliares y no en el intestino, sus huevos llegan a las heces a través de la bilis. Hallar huevos en materia fecal no siempre confirma una infección activa establecida, ya que puede deberse a un paso transitorio al ingerir hígado contaminado o no observarse en fases tempranas, por lo que conviene confirmarlo con la clínica y otras pruebas.
-                    </p>
+                    <p class="text-xs text-slate-300 leading-relaxed"id="diag-special-note"></p>
                 </div>
             </div>
         </section>
@@ -1235,7 +1233,10 @@
             const container = document.getElementById('diagnostic-cards-container');
             const filterContainer = document.getElementById('diag-filter-buttons');
             const diags = parasiteData[currentParasite].diagnostics;
-
+const diagSpecialNoteEl = document.getElementById("diag-special-note");
+if (diagSpecialNoteEl) {
+  diagSpecialNoteEl.textContent = parasiteData[currentParasite].diagSpecialNote || "";
+}
             if (currentParasite === 'fasciola') {
                 filterContainer.innerHTML = `
                     <button onclick="filterDiagnostics('all')" class="px-3 py-1.5 rounded-lg text-xs font-bold ${activeDiagFilter === 'all' ? 'bg-brand-teal text-white' : 'bg-brand-card text-slate-300'}">Todos</button>
